@@ -1,4 +1,4 @@
-#include "main.h"
+#include <stdio.h>
 
 /**
  * main - Entry point
@@ -13,7 +13,7 @@ int main(void)
 	int limit = 1024;
 	int sum = 0;
 
-	for (int i = 3; i < limit; i++)
+	for (int i = 1; i < limit; i++)
 	{
 		if (i % 3 == 0 || i % 5 == 0)
 		{
@@ -21,7 +21,7 @@ int main(void)
 		}
 	}
 
-	printf("The sum of all multiples of 3 or 5 below %d is %d\n", limit, sum);
+	printf("%d\n", sum);
 
-	return (0);
+	return 0;
 }
