@@ -20,11 +20,12 @@ int main(void)
 	{
 		next = first + second;
 		printf(", %lu", next);
+
 		first = second;
 		second = next;
 	}
 
 	printf("\n");
 
-	return (0);
+	return 0;
 }
