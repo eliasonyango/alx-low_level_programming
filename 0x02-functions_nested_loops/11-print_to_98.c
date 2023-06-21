@@ -1,28 +1,31 @@
-#include <iostream>
+#include <stdio.h>
 
-void print_to_98(int n) {
-    while (n != 99) {
-        std::cout << n;
-        if (n != 98) {
-            std::cout << ", ";
-        } else {
-            std::cout << std::endl;
-        }
-        
-        if (n < 98) {
-            n++;
-        } else {
-            n--;
-        }
-    }
-}
+/**
+ * print_to_98 - Prints all natural numbers from n to 98.
+ * @n: The starting number.
+ */
+void print_to_98(int n)
+{
+	int i;
 
-int main() {
-    int number;
-    std::cout << "Enter a number: ";
-    std::cin >> number;
-    
-    print_to_98(number);
-    
-    return 0;
+	if (n <= 98)
+	{
+		for (i = n; i <= 98; i++)
+		{
+			printf("%d", i);
+			if (i != 98)
+				printf(", ");
+		}
+	}
+	else
+	{
+		for (i = n; i >= 98; i--)
+		{
+			printf("%d", i);
+			if (i != 98)
+				printf(", ");
+		}
+	}
+
+	printf("\n");
 }
