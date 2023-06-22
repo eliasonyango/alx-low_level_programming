@@ -5,7 +5,7 @@
  * @size: The size of the triangle.
  *
  * If size is 0 or less, only prints a newline character.
- * Use the character '#' to print the triangle.
+ * Uses the character '#' to print the triangle.
  */
 void print_triangle(int size)
 {
@@ -17,9 +17,12 @@ void print_triangle(int size)
 		return;
 	}
 
-	for (i = 0; i < size; i++)
+	for (i = 1; i <= size; i++)
 	{
-		for (j = 0; j <= i; j++)
+		for (j = 1; j <= size - i; j++)
+			_putchar(' ');
+
+		for (j = 1; j <= i; j++)
 			_putchar('#');
 
 		_putchar('\n');
